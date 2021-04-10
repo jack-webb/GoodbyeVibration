@@ -1,6 +1,6 @@
 # GoodbyeVibration (Root)
 
-**Forcefully disable vibration and haptic feedback for any app**
+**Forcefully disable vibration and haptic feedback for any Android app**
 
 Quite a few apps on my Android 10 device have begun ignoring my haptic feedback and vibration 
 preferences, most notably the YouTube app when seeking along a video's timeline and its chapters. 
