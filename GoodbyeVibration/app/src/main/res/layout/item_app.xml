@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="app"
+            type="me.jackwebb.goodbyevibration.AppInfo" />
+
+        <variable
+            name="checked"
+            type="Boolean" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true">
+
+        <ImageView
+            android:id="@+id/ivAppIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/app_icon_height"
+            android:layout_marginHorizontal="@dimen/margin_default"
+            android:layout_marginVertical="@dimen/margin_medium"
+            android:adjustViewBounds="true"
+            android:src="@{app.icon}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/ic_launcher_foreground"
+            android:contentDescription="@string/app_icon" />
+
+        <TextView
+            android:id="@+id/tvAppName"
+            style="@style/TextAppearance.AppCompat.Subhead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_medium"
+            android:text="@{app.name}"
+            app:layout_constraintStart_toEndOf="@id/ivAppIcon"
+            app:layout_constraintTop_toTopOf="@id/ivAppIcon"
+            app:layout_constraintBottom_toTopOf="@id/tvPackageName"
+            tools:text="YouTube" />
+
+
+        <TextView
+            android:id="@+id/tvPackageName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_medium"
+            android:text="@{app.packageName}"
+            app:layout_constraintBottom_toBottomOf="@id/ivAppIcon"
+            app:layout_constraintStart_toEndOf="@id/ivAppIcon"
+            app:layout_constraintTop_toBottomOf="@id/tvAppName"
+            tools:text="com.google.android.youtube" />
+
+        <CheckBox
+            android:id="@+id/checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

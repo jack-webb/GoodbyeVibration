@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Goodbye Vibrations</string>
+    <string name="reset_all">Reset All</string>
+    <string name="show_system_apps">Show System apps</string>
+    <string name="show_google_apps">Show Google apps</string>
+    <string name="about">About</string>
+    <string name="app_icon">App Icon</string>
+</resources>
