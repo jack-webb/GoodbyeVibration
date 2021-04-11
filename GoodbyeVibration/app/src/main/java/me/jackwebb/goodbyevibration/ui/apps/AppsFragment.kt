@@ -59,11 +59,6 @@ class AppsFragment : Fragment() {
             }
             R.id.about -> {
                 findNavController().navigate(R.id.about)
-
-                childFragmentManager.beginTransaction()
-                    .add(AboutFragment.newInstance(), "ABOUT_TAG")
-                    .commit()
-                // Todo Nav to about
             }
             else -> return super.onOptionsItemSelected(item)
         }
