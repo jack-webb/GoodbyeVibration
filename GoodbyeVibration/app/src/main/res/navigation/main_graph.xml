@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/apps_list">
+
+    <fragment
+        android:id="@+id/apps_list"
+        android:name="me.jackwebb.goodbyevibration.ui.apps.AppsFragment"
+        android:label="screen_app_list"
+        tools:layout="@layout/screen_app_list" >
+        <action
+            android:id="@+id/action_appsFragment_to_aboutFragment"
+            app:destination="@id/about" />
+    </fragment>
+    <fragment
+        android:id="@+id/about"
+        android:name="me.jackwebb.goodbyevibration.ui.about.AboutFragment"
+        android:label="AboutFragment"
+        tools:layout="@layout/screen_about"/>
+</navigation>

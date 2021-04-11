@@ -1,4 +1,4 @@
-package me.jackwebb.goodbyevibration.ui.main
+package me.jackwebb.goodbyevibration.ui.apps
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

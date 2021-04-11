@@ -1,4 +1,4 @@
-package me.jackwebb.goodbyevibration.ui.main
+package me.jackwebb.goodbyevibration.ui.apps
 
 object Constants {
     const val DISABLED_DATA_WORK_KEY = "DISABLED_DATA"

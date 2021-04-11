@@ -3,7 +3,7 @@ package me.jackwebb.goodbyevibration
 import android.content.Context
 import androidx.work.Worker
 import androidx.work.WorkerParameters
-import me.jackwebb.goodbyevibration.ui.main.Constants.DISABLED_DATA_WORK_KEY
+import me.jackwebb.goodbyevibration.ui.apps.Constants.DISABLED_DATA_WORK_KEY
 
 class VibrationPersistenceWorker(context: Context, params: WorkerParameters) : Worker(context, params) {
     override fun doWork(): Result {
