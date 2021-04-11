@@ -1,4 +1,4 @@
-package me.jackwebb.goodbyevibration.ui.main
+package me.jackwebb.goodbyevibration.ui.apps
 
 import android.annotation.SuppressLint
 import android.app.Application
@@ -14,7 +14,7 @@ import kotlinx.coroutines.launch
 import me.jackwebb.goodbyevibration.AppInfo
 import me.jackwebb.goodbyevibration.VibrationPersistenceWorker
 import me.jackwebb.goodbyevibration.repo.AppRepository
-import me.jackwebb.goodbyevibration.ui.main.Constants.DISABLED_DATA_WORK_KEY
+import me.jackwebb.goodbyevibration.ui.apps.Constants.DISABLED_DATA_WORK_KEY
 import timber.log.Timber
 import java.util.concurrent.TimeUnit
 import javax.inject.Inject

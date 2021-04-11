@@ -1,20 +1,22 @@
-package me.jackwebb.goodbyevibration.ui.main
+package me.jackwebb.goodbyevibration.ui.apps
 
 import android.os.Bundle
 import android.view.*
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import dagger.hilt.android.AndroidEntryPoint
 import me.jackwebb.goodbyevibration.R
-import me.jackwebb.goodbyevibration.databinding.MainFragmentBinding
+import me.jackwebb.goodbyevibration.databinding.ScreenAppListBinding
 import me.jackwebb.goodbyevibration.observeNotNull
+import me.jackwebb.goodbyevibration.ui.about.AboutFragment
 
 @AndroidEntryPoint
 class AppsFragment : Fragment() {
 
     private val viewModel by viewModels<AppsViewModel>()
 
-    private lateinit var binding: MainFragmentBinding
+    private lateinit var binding: ScreenAppListBinding
     private val appAdapter = AppAdapter {
         when (it) {
             is ClickAction.OnAppChecked -> viewModel.onAppChecked(it.packageName, it.checked)
@@ -26,7 +28,7 @@ class AppsFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = MainFragmentBinding.inflate(inflater, container, false)
+        binding = ScreenAppListBinding.inflate(inflater, container, false)
         setHasOptionsMenu(true)
         return binding.root
     }
@@ -56,6 +58,11 @@ class AppsFragment : Fragment() {
                 viewModel.resetAll()
             }
             R.id.about -> {
+                findNavController().navigate(R.id.about)
+
+                childFragmentManager.beginTransaction()
+                    .add(AboutFragment.newInstance(), "ABOUT_TAG")
+                    .commit()
                 // Todo Nav to about
             }
             else -> return super.onOptionsItemSelected(item)
