@@ -1,12 +1,15 @@
 <resources>
     <string name="app_name">Goodbye Vibrations</string>
     <string name="reset_all">Reset All</string>
+    <string name="cancel">Cancel</string>
+    <string name="reset_all_warning">Are you sure you want to reset vibration and haptics for all apps?</string>
     <string name="show_system_apps">Show System apps</string>
     <string name="show_google_apps">Show Google apps</string>
     <string name="about">About</string>
     <string name="app_icon">App Icon</string>
     <string name="github_link">https://github.com/jack-webb/GoodbyeVibration/</string>
     <string name="description">Forcefully disable vibration and haptic feedback in any app. Requires root.</string>
+
 
     <string name="attributes">
         This application makes use of these third-party libraries:\n
