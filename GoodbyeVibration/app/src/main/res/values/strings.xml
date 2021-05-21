@@ -6,14 +6,11 @@
     <string name="about">About</string>
     <string name="app_icon">App Icon</string>
     <string name="github_link">https://github.com/jack-webb/GoodbyeVibration/</string>
+    <string name="description">Forcefully disable vibration and haptic feedback in any app. Requires root.</string>
 
     <string name="attributes">
-        This application makes use of the following libraries:\n
+        This application makes use of these third-party libraries:\n
         - <a href="https://github.com/JakeWharton/timber">Timber</a>\n
         - <a href="https://github.com/topjohnwu/libsu/">libsu</a>\n
-        - <a href="https://developer.android.com/jetpack/androidx/releases/work">WorkManager</a> (Jetpack)\n
-        - <a href="https://developer.android.com/jetpack/androidx/releases/room">Room</a> (Jetpack)\n
-        - <a href="https://developer.android.com/jetpack/androidx/releases/hilt">Hilt</a> (Jetpack)\n
-        - <a href="https://developer.android.com/jetpack/androidx/releases/navigation">Navigation</a> (Jetpack)\n
     </string>
 </resources>
