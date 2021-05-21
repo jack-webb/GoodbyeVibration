@@ -1,7 +1,10 @@
 package me.jackwebb.goodbyevibration.ui.apps
 
+import android.content.DialogInterface
 import android.os.Bundle
 import android.view.*
+import androidx.appcompat.app.AlertDialog
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
@@ -9,7 +12,7 @@ import dagger.hilt.android.AndroidEntryPoint
 import me.jackwebb.goodbyevibration.R
 import me.jackwebb.goodbyevibration.databinding.ScreenAppListBinding
 import me.jackwebb.goodbyevibration.observeNotNull
-import me.jackwebb.goodbyevibration.ui.about.AboutFragment
+
 
 @AndroidEntryPoint
 class AppsFragment : Fragment() {
@@ -55,7 +58,17 @@ class AppsFragment : Fragment() {
                 viewModel.showGoogleApps(item.isChecked)
             }
             R.id.resetAll -> {
-                viewModel.resetAll()
+                val alert = AlertDialog.Builder(requireContext())
+                    .setMessage(R.string.reset_all_warning)
+                    .setNegativeButton(R.string.cancel) { _, _ -> } // todo Remove unused lambda
+                    .setPositiveButton(R.string.reset_all) { _: DialogInterface, _: Int -> viewModel.resetAll() }
+                    .create()
+
+                alert.show()
+
+                // todo If we reuse this, move it to a style
+                alert.getButton(AlertDialog.BUTTON_POSITIVE)
+                    .setTextColor(ContextCompat.getColor(requireContext(), R.color.error))
             }
             R.id.about -> {
                 findNavController().navigate(R.id.about)
