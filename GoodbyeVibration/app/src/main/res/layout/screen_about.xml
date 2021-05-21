@@ -25,6 +25,7 @@
                 android:layout_height="wrap_content"
                 android:contentDescription="@string/app_icon"
                 android:src="@drawable/ic_launcher_foreground" />
+
         </LinearLayout>
 
         <TextView
@@ -41,27 +42,40 @@
 
         <TextView
             android:id="@+id/link"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginHorizontal="@dimen/margin_default"
+
+            android:layout_marginTop="@dimen/margin_small"
+            android:gravity="center"
             android:text="@string/github_link"
             android:textAppearance="@style/TextAppearance.AppCompat.Small"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/appName" />
+
+
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_default"
+            android:layout_marginTop="@dimen/margin_small"
+            android:gravity="center"
+            android:text="@string/description"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            app:layout_constraintTop_toBottomOf="@+id/link" />
 
         <TextView
             android:id="@+id/attributions"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="32dp"
-            android:layout_marginEnd="16dp"
+
+            android:layout_marginHorizontal="@dimen/margin_default"
+            android:layout_marginTop="@dimen/margin_xxl"
             android:text="@string/attributes"
             android:textAlignment="textStart"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/link" />
+            app:layout_constraintTop_toBottomOf="@+id/description" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
