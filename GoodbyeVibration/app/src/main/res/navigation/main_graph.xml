@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/apps_list"
         android:name="me.jackwebb.goodbyevibration.ui.apps.AppsFragment"
-        android:label="screen_app_list"
+        android:label="@string/app_name"
         tools:layout="@layout/screen_app_list" >
         <action
             android:id="@+id/action_appsFragment_to_aboutFragment"
@@ -17,6 +17,6 @@
     <fragment
         android:id="@+id/about"
         android:name="me.jackwebb.goodbyevibration.ui.about.AboutFragment"
-        android:label="AboutFragment"
+        android:label="@string/about"
         tools:layout="@layout/screen_about"/>
 </navigation>
