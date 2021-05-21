@@ -1,7 +1,7 @@
 package me.jackwebb.goodbyevibration.repo
 
 import kotlinx.coroutines.flow.collect
-import me.jackwebb.goodbyevibration.VibrationController
+import me.jackwebb.goodbyevibration.persistence.VibrationController
 import me.jackwebb.goodbyevibration.database.AppDao
 import me.jackwebb.goodbyevibration.model.App
 import javax.inject.Inject
