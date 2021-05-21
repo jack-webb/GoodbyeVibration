@@ -1,4 +1,4 @@
-package me.jackwebb.goodbyevibration
+package me.jackwebb.goodbyevibration.ui.apps
 
 import android.graphics.drawable.Drawable
 

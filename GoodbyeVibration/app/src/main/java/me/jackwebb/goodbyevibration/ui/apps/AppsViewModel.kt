@@ -11,8 +11,7 @@ import androidx.work.*
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
-import me.jackwebb.goodbyevibration.AppInfo
-import me.jackwebb.goodbyevibration.VibrationPersistenceWorker
+import me.jackwebb.goodbyevibration.persistence.VibrationPersistenceWorker
 import me.jackwebb.goodbyevibration.repo.AppRepository
 import me.jackwebb.goodbyevibration.ui.apps.Constants.DISABLED_DATA_WORK_KEY
 import timber.log.Timber

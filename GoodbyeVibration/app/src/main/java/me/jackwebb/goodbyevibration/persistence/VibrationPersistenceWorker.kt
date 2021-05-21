@@ -1,4 +1,4 @@
-package me.jackwebb.goodbyevibration
+package me.jackwebb.goodbyevibration.persistence
 
 import android.content.Context
 import androidx.work.Worker
