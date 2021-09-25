@@ -8,4 +8,4 @@ This behaviour, along with most other Android permissions, can be controlled on 
 `appops`. This was removed from user-accessible settings in 4.4.2, but is still available under the hood. 
 
 GoodbyeVibration uses `appops` under the hood to remove a given app's `VIBRATE` permission. It 
-also provides a worker to persist the change, which can be overwritten when the app is updated.
+also provides a worker to persist the change, to prevent our setting from being overwritten when the app is updated.
